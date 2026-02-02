@@ -1,0 +1,150 @@
+[0m[4m[96mConfig:[0m
+{
+  "run": {
+    "mode": "train",
+    "device": "gpu"
+  },
+  "transforms": "none",
+  "dataset": {
+    "class_name": "ISIC2018Dataset",
+    "input_size": 224,
+    "training": {
+      "params": {
+        "data_dir": "/dccstor/urban/mustansar/codes/med/datasets/ISIC2018/np"
+      }
+    },
+    "validation": {
+      "params": {
+        "data_dir": "/dccstor/urban/mustansar/codes/med/datasets/ISIC2018/np"
+      }
+    },
+    "number_classes": 2
+  },
+  "data_loader": {
+    "train": {
+      "batch_size": 16,
+      "shuffle": true,
+      "num_workers": 0,
+      "pin_memory": true
+    },
+    "validation": {
+      "batch_size": 16,
+      "shuffle": false,
+      "num_workers": 0,
+      "pin_memory": true
+    },
+    "test": {
+      "batch_size": 16,
+      "shuffle": false,
+      "num_workers": 0,
+      "pin_memory": false
+    }
+  },
+  "training": {
+    "optimizer": {
+      "name": "Adam",
+      "params": {
+        "lr": 0.0001
+      }
+    },
+    "criterion": {
+      "name": "DiceLoss",
+      "params": {}
+    },
+    "scheduler": {
+      "factor": 0.5,
+      "patience": 10
+    },
+    "epochs": 150
+  },
+  "model": {
+    "save_dir": "./saved_models/isic2018_mamba_Exp9_1",
+    "load_weights": false,
+    "name": "MyNet",
+    "params": {
+      "n_channels": 3,
+      "n_classes": 2
+    }
+  }
+}
+~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~- 
+
+We are in ISIC2018DatasetFast at line 92
+We are in ISIC2018DatasetFast at line 95
+We are in ISIC2018DatasetFast at line 92
+We are in ISIC2018DatasetFast at line 95
+We are in ISIC2018DatasetFast at line 92
+We are in ISIC2018DatasetFast at line 95
+Length of trainig_dataset:	1815
+Length of validation_dataset:	259
+Length of test_dataset:		520
+
+ Training
+Validation
+Test
+Torch device: cuda
+encoder_channels is [64, 256, 512, 1024]
+encoder_channels is:  [64, 256, 512, 1024]
+dims are:  [64, 256, 512, 1024]
+Number of parameters: 11924026
+Total FLOPs: 6720728192
+GFLOPs: 6.72
+**********************    Scores are ****************
+*****************************************************
+*****************************************************
+{'test_metrics/MulticlassF1Score': tensor(0.9610, device='cuda:0'), 'test_metrics/MulticlassAccuracy': tensor(0.9610, device='cuda:0'), 'test_metrics/Dice': tensor(0.9056, device='cuda:0'), 'test_metrics/MulticlassPrecision': tensor(0.9610, device='cuda:0'), 'test_metrics/MulticlassSpecificity': tensor(0.9610, device='cuda:0'), 'test_metrics/MulticlassRecall': tensor(0.9610, device='cuda:0'), 'test_metrics/MulticlassJaccardIndex': tensor(0.8898, device='cuda:0')}
+*****************************************************
+*****************************************************
+encoder_channels is [64, 256, 512, 1024]
+encoder_channels is:  [64, 256, 512, 1024]
+dims are:  [64, 256, 512, 1024]
+Loaded best model weights...
+**********************    Scores are ****************
+*****************************************************
+*****************************************************
+{'test_metrics/MulticlassF1Score': tensor(0.9610, device='cuda:0'), 'test_metrics/MulticlassAccuracy': tensor(0.9610, device='cuda:0'), 'test_metrics/Dice': tensor(0.9056, device='cuda:0'), 'test_metrics/MulticlassPrecision': tensor(0.9610, device='cuda:0'), 'test_metrics/MulticlassSpecificity': tensor(0.9610, device='cuda:0'), 'test_metrics/MulticlassRecall': tensor(0.9610, device='cuda:0'), 'test_metrics/MulticlassJaccardIndex': tensor(0.8898, device='cuda:0')}
+*****************************************************
+*****************************************************
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@cccxc445.pok.ibm.com>
+Subject: Job 3895225: <CUDA_VISIBLE_DEVICES=0 python train_mamba_isic2018_Exp9_1.py> in cluster <cccCluster> Done
+
+Job <CUDA_VISIBLE_DEVICES=0 python train_mamba_isic2018_Exp9_1.py> was submitted from host <cccxl005> by user <mfiaz> in cluster <cccCluster> at Sun Jul 28 06:44:18 2024
+Job was executed on host(s) <2*cccxc445>, in queue <x86_24h>, as user <mfiaz> in cluster <cccCluster> at Sun Jul 28 06:58:56 2024
+</u/mfiaz> was used as the home directory.
+</dccstor/urban/mustansar/codes/med/codes/sasanet/SA2-Net-main/sa2net/SA2-Net-main/UNet_Awesome> was used as the working directory.
+Started at Sun Jul 28 06:58:56 2024
+Terminated at Sun Jul 28 07:27:38 2024
+Results reported at Sun Jul 28 07:27:38 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+CUDA_VISIBLE_DEVICES=0 python train_mamba_isic2018_Exp9_1.py
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1967.43 sec.
+    Max Memory :                                 6951 MB
+    Average Memory :                             6659.85 MB
+    Total Requested Memory :                     45056.00 MB
+    Delta Memory :                               38105.00 MB
+    Max Swap :                                   -
+    Max Processes :                              3
+    Max Threads :                                12
+    Run time :                                   1721 sec.
+    Turnaround time :                            2600 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <outputs/error_train_mamba_isic2018_Exp9_1.txt> for stderr output of this job.
+

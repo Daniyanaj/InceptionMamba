@@ -1,0 +1,45 @@
+# Core dependencies
+torch>=2.1.1
+torchvision>=0.16.1
+numpy>=1.24.0
+pillow>=10.0.0
+
+# Mamba and state space models
+mamba-ssm>=1.1.0
+causal-conv1d>=1.1.0
+
+# Vision and transformers
+timm>=0.9.0
+einops>=0.7.0
+
+# Medical image processing
+scikit-image>=0.21.0
+opencv-python>=4.8.0
+albumentations>=1.3.0
+
+# Metrics and evaluation
+torchmetrics>=1.0.0
+scikit-learn>=1.3.0
+
+# Utilities
+pyyaml>=6.0
+tqdm>=4.66.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+pandas>=2.0.0
+
+# Configuration
+omegaconf>=2.3.0
+
+# Distributed training
+accelerate>=0.24.0
+
+# Logging
+tensorboard>=2.14.0
+wandb>=0.15.0
+
+# Additional utilities
+scipy>=1.11.0
+imageio>=2.31.0
+h5py>=3.9.0
+torch-dct>=0.1.5
