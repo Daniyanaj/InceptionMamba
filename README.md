@@ -133,7 +133,7 @@ Visual comparisons on ISIC 2018 skin lesion segmentation. Ground truth boundarie
 **SegPC 2021 Results**
 
 <div align="center">
-  <img src="images/segpc.png" width="900"/>
+  <img src="images/Segpc.png" width="900"/>
 </div>
 
 Visual comparisons on SegPC 2021 plasma cell segmentation. **Blue** region indicates nucleus, **red** indicates cytoplasm.
