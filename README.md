@@ -4,10 +4,6 @@
 
 Official repository for **InceptionMamba: Efficient Multi-Stage Feature Enhancement with Selective State Space Model for 2D Medical Image Segmentation**
 
-<div align="center">
-  <img src="images/architecture.png" width="900"/>
-</div>
-
 > Daniya Najiha Abdul Kareem¹, Abdul Hannan², Mubashir Noman¹, Jean Lahoud¹, Mustansar Fiaz¹, Hisham Cholakkal¹  
 > ¹Mohamed bin Zayed University of AI, UAE  
 > ²University of Trento, Italy  
